@@ -1,0 +1,170 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1">
+    <link rel="apple-touch-icon" href="http://www.sushitrain.com.au/regi/icon/DOS-icon.png" />
+    <title>
+        DOS
+    </title>
+    <style type="text/css">
+        body {
+            font-family: 'Helvetica';
+            font-size: 40px;
+            background-color: #D3D3D3;
+        }
+
+        input {
+            font-size: 24px;
+            vertical-align: middle;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        table {
+            border-style: none;
+            background-color: #FFFFFF;
+        }
+
+        tr {
+            border-style: none;
+        }
+
+        td {
+            border-style: none;
+            text-align: center;
+        }
+
+        .topL {
+            background-image: url('/Images/topL.png');
+            border-style: none;
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+        }
+
+        .topC {
+            background-image: url('/Images/topC.png');
+            background-repeat: repeat-x;
+            font-size: 30px;
+        }
+
+        .topR {
+            background-image: url('/Images/topR.png');
+            width: 40px;
+            font-size: 30px;
+        }
+
+        .cntL {
+            background-image: url('/Images/cntL.png');
+        }
+
+        .cntR {
+            background-image: url('/Images/cntR.png');
+        }
+
+        .btmL {
+            background-image: url('/Images/btmL.png');
+            height: 40px;
+            font-size: 30px;
+        }
+
+        .btmC {
+            background-image: url('/Images/btmC.png');
+            font-size: 30px;
+        }
+
+        .btmR {
+            background-image: url('/Images/btmR.png');
+            font-size: 30px;
+        }
+
+        .Hidn {
+            visibility: hidden;
+            font-size: 1px;
+        }
+
+        #Msg {
+            font-size: 24px;
+            color: #FF0080;
+        }
+
+        .tdr {
+            text-align: right;
+        }
+    </style>
+    <script type="text/javascript">
+        function GetLocalTime() {
+            var now = new Date();
+            document.getElementById('LocalT').value = now.getFullYear() + "/" + (now.getMonth() + 1) + "/" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <form method="post" action="./Login.aspx?ReturnUrl=%2fOrder.aspx" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="/wEPDwUKLTI5OTY0OTE4NmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFB1BlcnNpc3QQ1EyQrxl5SF9E1W+VTp7YwR+zxg==" />
+        </div>
+
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+        </div>
+        <div>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="topL"></td>
+                    <td colspan="2" class="topC">&nbsp;</td>
+                    <td class="topR"></td>
+                </tr>
+                <tr>
+                    <td class="cntL"></td>
+                    <td class="tdr">User Name:</td>
+                    <td><input name="UID" type="text" id="UID" /></td>
+                    <td class="cntR"></td>
+                </tr>
+                <tr>
+                    <td class="cntL"></td>
+                    <td class="tdr">Password:</td>
+                    <td><input name="PWD" type="password" id="PWD" /></td>
+                    <td class="cntR"></td>
+                </tr>
+                <tr>
+                    <td class="cntL"></td>
+                    <td colspan="2">
+                        <input id="Persist" type="checkbox" name="Persist" /><label for="Persist">Remember
+                            password</label>
+                    </td>
+                    <td class="cntR"></td>
+                </tr>
+                <tr>
+                    <td class="cntL"></td>
+                    <td colspan="2"><input type="submit" name="B_Login" value="Login" onclick="GetLocalTime();"
+                            id="B_Login" /></td>
+                    <td class="cntR"></td>
+                </tr>
+                <tr>
+                    <td class="cntL"></td>
+                    <td colspan="2"><span id="Msg"></span></td>
+                    <td class="cntR"></td>
+                </tr>
+                <tr>
+                    <td class="btmL"></td>
+                    <td colspan="2" class="btmC"><input name="LocalT" type="text" id="LocalT" class="Hidn" /></td>
+                    <td class="btmR"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+</body>
+
+</html>
