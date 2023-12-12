@@ -4,7 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head id="Head1">
-    <link rel="apple-touch-icon" href="http://www.sushitrain.com.au/regi/icon/DOS-icon.png" />
     <title>
         DOS
     </title>
@@ -108,16 +107,8 @@
 
 <body>
 
-    <form method="post" action="./Login.aspx?ReturnUrl=%2fOrder.aspx" id="form1">
-        <div class="aspNetHidden">
-            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
-                value="/wEPDwUKLTI5OTY0OTE4NmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFB1BlcnNpc3QQ1EyQrxl5SF9E1W+VTp7YwR+zxg==" />
-        </div>
-
-        <div class="aspNetHidden">
-
-            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
-        </div>
+    <form method="post" action="{% url 'abcd' %}">
+        {% csrf_token %}
         <div>
             <table cellpadding="0" cellspacing="0">
                 <tr>
